@@ -1,4 +1,6 @@
 <?php
+
+// Import functions from functions.php
 require_once 'includes/functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -9,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $rate = floatval($_POST['rate']);
     $startDate = $_POST['start_date'];
 
-    // Normalize duration to months
+    // Convert years to months
     $months = $durationType === 'year' ? $duration * 12 : $duration;
 
     $monthlyRate = $rate / 12 / 100;
