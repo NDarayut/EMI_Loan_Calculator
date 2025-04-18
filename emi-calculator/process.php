@@ -59,3 +59,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "</table>";
 }
 ?>
+
+<form action="index.php" method="POST">
+    <input type="hidden" name="amount" value="<?= htmlspecialchars($_POST['amount']) ?>">
+    <input type="hidden" name="currency" value="<?= htmlspecialchars($_POST['currency']) ?>">
+    <input type="hidden" name="duration" value="<?= htmlspecialchars($_POST['duration']) ?>">
+    <input type="hidden" name="duration_type" value="<?= htmlspecialchars($_POST['duration_type']) ?>">
+    <input type="hidden" name="rate" value="<?= htmlspecialchars($_POST['rate']) ?>">
+    <input type="hidden" name="start_date" value="<?= htmlspecialchars($_POST['start_date']) ?>">
+
+    <button type="submit" class="btn btn-secondary mt-3">← Back & Edit</button>
+</form>

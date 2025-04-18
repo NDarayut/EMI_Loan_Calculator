@@ -12,7 +12,7 @@ function generateAmortizationSchedule($principal, $monthlyRate, $months, $emi, $
     $schedule = [];
     $balance = $principal;
 
-    $date = DateTime::createFromFormat('Ymd', $startDate);
+    $date = DateTime::createFromFormat('Y-m-d', $startDate);
 
     for ($i = 1; $i <= $months; $i++) {
         $interest = $balance * $monthlyRate;
