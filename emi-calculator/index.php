@@ -30,16 +30,20 @@
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Loan Amount:</label>
                                     <!-- Take in float value as loan amount -->
-                                    <input type="number" step="0.01" name="amount" class="form-control" required>
+                                    <input type="number" step="0.01" name="amount" class="form-control" required value="<?= isset($_POST['amount']) ? htmlspecialchars($_POST['amount']) : '' ?>">
                                 </div>
                                 
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Currency:</label>
                                     <select name="currency" class="form-select currency-select">
-                                        <option value="USD">USD</option>
-                                        <option value="CNY">CNY</option>
-                                        <option value="KHR">KHR</option>
-                                        <option value="THB">THB</option>
+                                    <?php
+                                        $currencies = ['USD', 'CNY', 'KHR', 'THB'];
+                                        $selectedCurrency = $_POST['currency'] ?? '';
+                                        foreach ($currencies as $currency) {
+                                            $selected = $currency === $selectedCurrency ? 'selected' : '';
+                                            echo "<option value=\"$currency\" $selected>$currency</option>";
+                                        }
+                                        ?>
                                     </select>
                                 </div>
                             </div>
@@ -48,20 +52,21 @@
                             <div class="row mb-3">
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Loan Duration:</label>
-                                    <input type="number" name="duration" class="form-control" required>
+                                    <input type="number" name="duration" class="form-control" required value="<?= isset($_POST['duration']) ? htmlspecialchars($_POST['duration']) : '' ?>">
                                 </div>
                                 
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Duration Type:</label>
                                     <div class="mt-2">
+                                        <?php $selectedType = $_POST['duration_type'] ?? 'year'; ?>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="duration_type" id="durationYear" value="year" checked>
+                                            <input class="form-check-input" type="radio" name="duration_type" id="durationYear" value="year" <?= $selectedType === 'year' ? 'checked' : '' ?> checked>
                                             <label class="form-check-label" for="durationYear">
                                                 Year
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="duration_type" id="durationMonth" value="month">
+                                            <input class="form-check-input" type="radio" name="duration_type" id="durationMonth" value="month" <?= $selectedType === 'month' ? 'checked' : '' ?>>
                                             <label class="form-check-label" for="durationMonth">
                                                 Month
                                             </label>
@@ -75,7 +80,7 @@
                                 <div class="col-12 form-group">
                                     <label class="form-label">Annual Interest Rate (%):</label>
                                     <!-- Convert annual rate to monthly rate -->
-                                    <input type="number" step="0.01" name="rate" class="form-control" required>
+                                    <input type="number" step="0.01" name="rate" class="form-control" required value="<?= isset($_POST['rate']) ? htmlspecialchars($_POST['rate']) : '' ?>">
                                 </div>
                             </div>
 
@@ -84,7 +89,7 @@
                                 <div class="col-12 form-group">
                                     <label class="form-label">Start Date:</label>
                                     <div class="input-group w-100">
-                                        <input type="text" class="form-control" id="datepicker" name="start_date" required>
+                                        <input type="text" class="form-control" id="datepicker" name="start_date" required value="<?= isset($_POST['start_date']) ? htmlspecialchars($_POST['start_date']) : '' ?>">
                                         <span class="input-group-text" id="date-icon">
                                             <i class="fas fa-calendar-alt"></i>
                                         </span>
@@ -133,6 +138,6 @@
             });
         });
     </script>
-    
+
 </body>
 </html>
