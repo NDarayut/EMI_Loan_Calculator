@@ -4,6 +4,13 @@
 
 An Equated Monthly Installment (EMI) is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. EMIs are used to pay off both interest and principal every month so that over a specified number of years, the loan is fully paid off. EMI loans are commonly used for home loans, car loans, and personal loans.
 
+## EMI Formula:  
+EMI = [P × r × (1 + r)^n] / [(1 + r)^n – 1]
+
+Where:
+- **P** = Loan Amount (Principal)  
+- **r** = Monthly Interest Rate = Annual Rate ÷ 12 ÷ 100  
+- **n** = Loan Tenure in Months  
 ## Features
 
 Our EMI Calculator website provides the following features:
