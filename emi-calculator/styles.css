@@ -14,8 +14,6 @@
     
 }
 
-
-/* Custom CSS for better form layout */
 .card-body {
     padding: 1.5rem;
 }
@@ -29,13 +27,11 @@
     margin-bottom: 0.5rem;
 }
 
-/* Make the currency select match width of other inputs */
 .currency-select {
     width: 100%;
     max-width: 100%;
 }
 
-/* Ensure consistent spacing */
 .form-section {
     width: 100%;
     padding: 0.5rem 0;
