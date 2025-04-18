@@ -54,11 +54,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $symbol = $currencySymbols[$currency] ?? '';
 
-    echo "<h2>Loan Summary</h2>";
-    echo "Total Money to Pay: " . number_format($totalPayment, 2) . " $currency<br>";
-    echo "Total Interest Earned by Lender: " . number_format($totalInterest, 2) . " $currency<br><br>";
+    echo "<div class='text-center mb-4'>";
+    echo "<h2 style='margin-bottom: 10px;'>Loan Details</h2>";
+    echo "<hr style='border: 1.5px solid black; width: 100%; margin: 0 auto;'>";
+    echo "</div>";
 
-    echo "<h2>EMI Repayment Schedule</h2>";
+    echo "<div style='font-size: 18px; line-height: 1.8;'>"; // Bigger font and spacing
+echo "<span style='display: inline-block; width: 400px; font-weight: bold;'>Loan Amount:</span> " . $symbol . number_format($amount, 2) . "<br>";
+echo "<span style='display: inline-block; width: 400px; font-weight: bold;'>Loan Tenure:</span> $duration $durationType<br>";
+echo "<span style='display: inline-block; width: 400px; font-weight: bold;'>Total Interest Amount:</span> " . $symbol . number_format($totalInterest, 2) . "<br>";
+echo "<span style='display: inline-block; width: 400px; font-weight: bold;'>Monthly EMI:</span> " . $symbol . number_format($emi, 2) . "<br>";
+echo "<span style='display: inline-block; width: 400px; font-weight: bold;'>Annual Interest Rate:</span> " . number_format($rate, 2) . "%<br>";
+echo "<span style='display: inline-block; width: 400px; font-weight: bold;'>Total Payment (Principal + Interest):</span> " . $symbol . number_format($totalPayment, 2) . "<br>";
+echo "</div><br>";
+    
+
+    echo "<div class='text-center mb-4'>";
+    echo "<h2 style='margin-bottom: 10px;'>Loan Repayment Schedule</h2>";
+    echo "<hr style='border: 1.5px solid black; width: 100%; margin: 0 auto;'>";
+    echo "</div>";
     echo "<div class='table-responsive'>";
     echo "<table class='table table-bordered table-striped text-center align-middle'>";
     echo "<thead>
