@@ -103,5 +103,58 @@ echo "</div><br>";
 ?>
 </div>
 
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h2 style="margin-bottom: 10px;">Understanding EMI Loans</h2>
+        <hr style="border: 1.5px solid black; width: 100%; margin: 0 auto;">
+    </div>
+    <div style="font-size: 18px; line-height: 1.8;">
+        <p><strong>What is an EMI Loan?</strong></p>
+        <p>EMI stands for Equated Monthly Installment. It is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. EMI loans are commonly used for personal loans, home loans, car loans, and other types of financing.</p>
+        
+        <p><strong>EMI Formula:</strong></p>
+        <p>The formula to calculate EMI is:</p>
+        
+        <p style="font-family: monospace; background-color: #f8f9fa; padding: 10px; border-radius: 5px; text-align: center;">
+        EMI = 
+        <span style="display: inline-block; vertical-align: middle;">
+            <span style="border-bottom: 1px solid; display: block; padding: 0 5px;">
+            P × r × (1 + r)<sup>n</sup>
+            </span>
+            <span style="display: block; padding: 5px;">
+            (1 + r)<sup>n</sup> - 1
+            </span>
+        </span>
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li><strong>P</strong> = Principal loan amount</li>
+            <li><strong>r</strong> = Monthly interest rate (annual rate divided by 12)</li>
+            <li><strong>n</strong> = Loan tenure in months</li>
+        </ul>
+
+        <p><strong>Pros of EMI Loans:</strong></p>
+        <ul>
+            <li>Predictable monthly payments make budgeting easier.</li>
+            <li>Flexible loan tenures allow borrowers to choose repayment periods that suit their financial situation.</li>
+            <li>Convenient for financing large purchases like homes, cars, or education.</li>
+        </ul>
+
+        <p><strong>Cons of EMI Loans:</strong></p>
+        <ul>
+            <li>Interest rates can significantly increase the total repayment amount.</li>
+            <li>Missing payments can lead to penalties and affect credit scores.</li>
+            <li>Fixed EMIs may not allow for early repayment flexibility without additional charges.</li>
+        </ul>
+
+        <p><strong>How EMI Loans Differ from Other Loans:</strong></p>
+        <ul>
+            <li>Unlike bullet repayment loans, EMI loans require regular monthly payments instead of a lump sum at the end.</li>
+            <li>EMI loans provide a structured repayment plan, whereas overdraft loans allow flexible withdrawals and repayments.</li>
+            <li>EMI loans are typically used for long-term financing, while payday loans are short-term and often have higher interest rates.</li>
+        </ul>
+    </div>
+</div>
+
 
 
