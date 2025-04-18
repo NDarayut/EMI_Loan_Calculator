@@ -36,13 +36,13 @@
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Currency:</label>
                                     <select name="currency" class="form-select currency-select">
-                                    <?php
-                                        $currencies = ['USD', 'CNY', 'KHR', 'THB'];
-                                        $selectedCurrency = $_POST['currency'] ?? '';
-                                        foreach ($currencies as $currency) {
-                                            $selected = $currency === $selectedCurrency ? 'selected' : '';
-                                            echo "<option value=\"$currency\" $selected>$currency</option>";
-                                        }
+                                        <?php
+                                            $currencies = ['USD', 'CNY', 'KHR', 'THB'];
+                                            $selectedCurrency = $_POST['currency'] ?? '';
+                                            foreach ($currencies as $currency) {
+                                                $selected = $currency === $selectedCurrency ? 'selected' : '';
+                                                echo "<option value=\"$currency\" $selected>$currency</option>";
+                                            }
                                         ?>
                                     </select>
                                 </div>
@@ -59,6 +59,7 @@
                                     <label class="form-label">Duration Type:</label>
                                     <div class="mt-2">
                                         <?php $selectedType = $_POST['duration_type'] ?? 'year'; ?>
+
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="duration_type" id="durationYear" value="year" <?= $selectedType === 'year' ? 'checked' : '' ?> checked>
                                             <label class="form-check-label" for="durationYear">
@@ -71,6 +72,7 @@
                                                 Month
                                             </label>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +81,6 @@
                             <div class="row mb-3">
                                 <div class="col-12 form-group">
                                     <label class="form-label">Annual Interest Rate (%):</label>
-                                    <!-- Convert annual rate to monthly rate -->
                                     <input type="number" step="0.01" name="rate" class="form-control" required value="<?= isset($_POST['rate']) ? htmlspecialchars($_POST['rate']) : '' ?>">
                                 </div>
                             </div>
@@ -97,13 +98,35 @@
                                 </div>
                             </div>
 
+                            <!-- EMI Method -->
+                            <div class="row mb-3">
+                                <div class="col-12 form-group">
+                                    <label class="form-label">EMI Method:</label>
+                                    <div class="mt-2">
+                                        <?php $selectedMethod = $_POST['emi_method'] ?? 'flat_rate'; ?>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="emi_method" id="flatRate" value="flat_rate" <?= $selectedMethod === 'flat_rate' ? 'checked' : '' ?>>
+                                            <label class="form-check-label" for="flatRate">
+                                                Flat Rate
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="emi_method" id="reducingBalance" value="reducing_balance" <?= $selectedMethod === 'reducing_balance' ? 'checked' : '' ?>>
+                                            <label class="form-check-label" for="reducingBalance">
+                                                Reducing Balance
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="row mt-4">
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary custom-btn w-100">Calculate EMI</button>
                                 </div>
                             </div>
                             
-
                         </form>
                     </div>
                 </div>
@@ -112,7 +135,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Flatpickr JavaScript -->
+    <!-- Flatpicker JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>

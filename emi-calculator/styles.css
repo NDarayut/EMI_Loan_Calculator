@@ -10,7 +10,8 @@
 }
 
 .custom-btn:hover {
-    background-color: #1E4069;
+    background-color: #1E4069 !important;
+    
 }
 
 
