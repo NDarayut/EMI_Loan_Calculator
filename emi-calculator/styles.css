@@ -4,8 +4,9 @@
 }
 
 .custom-btn {
-    background-color: #162B55; 
-    color: white;
+    background-color: #162B55 !important;
+    color: white !important;
+    border: none;
 }
 
 .custom-btn:hover {
@@ -37,4 +38,25 @@
 .form-section {
     width: 100%;
     padding: 0.5rem 0;
+}
+
+.fixed-top-left {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.body-with-fixed-button {
+    padding-top: 80px; 
+    padding-left: 20px; 
+}
+
+table th, table td {
+    vertical-align: middle;
+    padding: 12px !important;
+}
+table th{
+    background-color: #162B55 !important; 
+    color: white !important;
 }
