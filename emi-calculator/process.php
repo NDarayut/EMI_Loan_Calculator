@@ -121,6 +121,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     echo "</tbody></table></div>";
+
+    echo '<form action="download-pdf.php" method="post" target="_blank">
+        <input type="hidden" name="amount" value="' . htmlspecialchars($amount) . '">
+        <input type="hidden" name="currency" value="' . htmlspecialchars($currency) . '">
+        <input type="hidden" name="duration" value="' . htmlspecialchars($duration) . '">
+        <input type="hidden" name="duration_type" value="' . htmlspecialchars($durationType) . '">
+        <input type="hidden" name="rate" value="' . htmlspecialchars($rate) . '">
+        <input type="hidden" name="start_date" value="' . htmlspecialchars($startDate) . '">
+        <input type="hidden" name="emi_method" value="' . htmlspecialchars($emiMethod) . '">
+        
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-success custom-btn">
+            <i class="bi bi-download"></i> Download PDF
+            </button>
+        </div>
+    </form>';
 }
 ?>
 </div>
