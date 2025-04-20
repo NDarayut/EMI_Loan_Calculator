@@ -333,8 +333,8 @@
                         <a href="#" class="text-light me-2"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <p class="mt-3 text-light">
-                        <i class="fas fa-envelope me-2"></i> support@emicalculator.com<br>
-                        <i class="fas fa-phone me-2"></i> +1 (123) 456-7890
+                        <i class="fas fa-envelope me-2"></i> darayutnhem009.com<br>
+                        <i class="fas fa-phone me-2"></i> +855 92 444 234
                     </p>
                 </div>
             </div>

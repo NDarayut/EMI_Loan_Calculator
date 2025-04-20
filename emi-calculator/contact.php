@@ -59,17 +59,8 @@
                         <h3 class="mb-0">Send Us a Message</h3>
                     </div>
                     <div class="card-body">
-                        <?php
-                        // Process form submission
-                        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
-                            // This is where you'd normally process the form data
-                            // For demonstration, we'll just show a success message
-                            echo '<div class="alert alert-success" role="alert">
-                                    Thank you for your message! We will get back to you soon.
-                                  </div>';
-                        }
-                        ?>
-                        <form method="POST" action="contact.php">
+                        
+                        <form action="send_email.php"  method="POST">
                             <div class="row mb-3">
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Full Name *</label>
@@ -166,28 +157,6 @@
             </div>
         </div>
         
-        <!-- Map Section -->
-        <div class="row mt-5">
-            <div class="col-12">
-                <div class="card shadow">
-                    <div class="card-header custom-header">
-                        <h3 class="mb-0">Find Us</h3>
-                    </div>
-                    <div class="card-body p-0">
-                        <!-- You would replace this with an actual map integration -->
-                        <div class="bg-light text-center p-5">
-                            <p class="mb-4">Map integration would go here. For a live site, you could use:</p>
-                            <ul class="list-unstyled">
-                                <li>Google Maps API</li>
-                                <li>OpenStreetMap</li>
-                                <li>Mapbox</li>
-                            </ul>
-                            <p>For now, this is a placeholder for the map element.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <!-- FAQ Quick Links -->
         <div class="row mt-5">
