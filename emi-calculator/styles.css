@@ -57,3 +57,55 @@ table th{
     background-color: #162B55 !important; 
     color: white !important;
 }
+
+/* Navbar hover effect */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Footer styles */
+.footer a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: underline !important;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(22, 43, 85, 0.1);
+    color: #162B55;
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(22, 43, 85, 0.25);
+}
+.faq-header {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+.faq-category {
+    margin-bottom: 40px;
+}
+.faq-category h3 {
+    color: #162B55;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #162B55;
+}
